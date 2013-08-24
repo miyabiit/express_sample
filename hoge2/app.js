@@ -37,7 +37,11 @@ app.get('/test', function (req, res){
 });
 
 app.get('/springy', function (req, res){
-	res.render('springy.jade', { title: 'SPRIGY'});
+	res.render('springy.jade', { title: 'SPRIGY demo by json'});
+});
+
+app.get('/springy2', function (req, res){
+	res.render('springy2.jade', { title: 'SPRIGY simple demo'});
 });
 
 http.createServer(app).listen(app.get('port'), function(){

@@ -11,10 +11,16 @@ html
 			div.uk-navbar
 				a.uk-navbar-brand(href="http://getspringy.com") UIKIT & SPRINGY.JS
 				ul.uk-navbar-nav
-					li#index
+					li#index.uk-active
 						a(href="/") UI sample
-					li#springy.uk-active
-						a(href="/springy") Springy Demo
+					li#springy(class="uk-parent", data-uk-dropdown)
+						a Springy
+						div(class="uk-dropdown uk-dropdown-navbar")
+							ul(class="uk-nav uk-nav-navbar")
+								li#demo-springy
+									a(href="/springy") Demo data json
+								li#demo-springy2
+									a(href="/springy2") Demo simple
 				nav.uk-navbar-flip
 					ul.uk-navbar-nav
 						li#help
