@@ -36,6 +36,10 @@ app.get('/test', function (req, res){
 	res.render('test.jade', { subtitle: 'test case1' });
 });
 
+app.get('/springy', function (req, res){
+	res.render('springy.jade', { title: 'SPRIGY'});
+});
+
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
