@@ -1,7 +1,22 @@
 doctype 5
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel="stylesheet", href="/stylesheets/uikit.almost-flat.css")
+		script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js")
+		script(src="/javascripts/uikit.min.js")
+	body
+		div.uk-container
+			div.uk-navbar
+				a.uk-navbar-brand(href="") UIKIT & SPRINGY.JS
+				ul.uk-navbar-nav
+					li#index
+						a(href="/") UI sample
+					li#springy.uk-active
+						a(href="/springy") Springy Demo
+				nav.uk-navbar-flip
+					ul.uk-navbar-nav
+						li#help
+							a(href="/test") HELP
+			block content

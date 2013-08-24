@@ -1,7 +1,5 @@
 extends layout
 block content
-
-	script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js")
 	script(src="/javascripts/springy.js")
 	script(src="/javascripts/springyui.js")
 	script.
@@ -28,10 +26,13 @@ block content
 				graph: graph
 			});
 		});
+		jQuery("#index").removeClass("uk-active");
+		jQuery("#springy").addClass("uk-active");
+		jQuery("#help").removeClass("uk-active");
 
 	h1= title
 	p this is copy of springy demo.
-	
+
 	a(href="http://getspringy.com") Springy.com
 
 	canvas(id="springydemo" width="640" height="480")
