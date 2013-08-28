@@ -23,6 +23,8 @@ app.use(app.router);
 app.use(require('stylus').middleware(__dirname + '/public'));
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
@@ -32,17 +34,9 @@ app.get('/', routes.index);
 app.get('/users', user.list);
 
 // baker add
-app.get('/test', function (req, res){
-	res.render('test.jade', { subtitle: 'test case1' });
-});
-
-app.get('/springy', function (req, res){
-	res.render('springy.jade', { title: 'SPRIGY demo by json'});
-});
-
-app.get('/springy2', function (req, res){
-	res.render('springy2.jade', { title: 'SPRIGY simple demo'});
-});
+app.get('/springy', routes.springy);
+app.get('/springy2', routes.springy2);
+app.get('/test', routes.test);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

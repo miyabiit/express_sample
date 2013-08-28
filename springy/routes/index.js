@@ -6,3 +6,16 @@
 exports.index = function(req, res){
   res.render('index', { title: 'Express' });
 };
+
+exports.test = function (req, res){
+	res.render('test.jade', { subtitle: 'test case1' });
+};
+
+exports.springy = function(req, res){
+	res.render('springy', { title: 'SPRINGY demo by json'});
+};
+
+exports.springy2 = function (req, res){
+	res.render('springy2.jade', { title: 'SPRIGY simple demo'});
+};
+
