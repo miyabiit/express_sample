@@ -19,3 +19,6 @@ exports.springy2 = function (req, res){
 	res.render('springy2.jade', { title: 'SPRIGY simple demo'});
 };
 
+exports.jstest = function (req, res) {
+	res.render('js_test0.jade', { title: 'Javascript Ninja Test code sample'});
+};

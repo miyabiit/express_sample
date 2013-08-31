@@ -5,3 +5,9 @@ body {
 a {
   color: #00b7ff;
 }
+li.pass {
+  color: #008000;
+}
+li.fail {
+  color: #f00;
+}

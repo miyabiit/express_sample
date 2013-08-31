@@ -1,0 +1,21 @@
+extends layout
+block content
+	script.
+		function assert(value, desc){
+			var li = document.createElement("li");
+			li.className = value ? "pass" : "fail uk-icon-warning-sign";
+			li.appendChild(document.createTextNode(desc));
+			document.getElementById("results").appendChild(li);
+		}
+		window.onload = function () {
+			assert (true , "テストスイートを実行中");
+			assert (false, " 失敗!");
+		};
+		jQuery("#index").removeClass("uk-active");
+		jQuery("#springy").removeClass("uk-active");
+		jQuery("#jstest").addClass("uk-active");
+		jQuery("#help").removeClass("uk-active");
+	
+	h1= title
+	br
+	ul#results(class="uk-list uk-list-striped")
