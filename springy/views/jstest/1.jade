@@ -1,12 +1,14 @@
 extends layout
 block content
-	ul#results
+	ul#results(class="uk-list uk-list-striped")
 	script.
+		navmenu('#jstest');
+		setJsTestMenu("#jstest1");
 		(function () {
 			var results;
 			this.assert = function assert(value, desc) {
 				var li = document.createElement("li");
-				li.className = value ? "pass" : "fail";
+				li.className = value ? "pass" : "fail uk-icon-warning-sign";
 				li.appendChild(document.createTextNode(desc));
 				results.appendChild(li);
 				if(!value) {
@@ -37,6 +39,4 @@ block content
 				assert(5, "合格");
 			});
 		};
-		navmenu('#jstest');
-		setJsTestMenu("#jstest1");
 

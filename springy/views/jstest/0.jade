@@ -2,9 +2,9 @@ extends layout
 block content
 	ul#results(class="uk-list uk-list-striped")
 	script.
+		navmenu('#jstest');
+		setJsTestMenu("#jstest0");
 		$(function () {
 			assert (true , "テストスイートを実行中");
 			assert (false, " 失敗!");
 		});
-		navmenu('#jstest');
-		setJsTestMenu("#jstest0");
