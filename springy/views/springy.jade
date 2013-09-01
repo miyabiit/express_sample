@@ -18,18 +18,15 @@ block content
 			]
 		};
 
-		jQuery(function(){
+		$(function(){
 			var graph = new Springy.Graph();
 			graph.loadJSON(graphJSON);
 
-			var springy = jQuery('#springydemo').springy({
+			var springy = $('#springydemo').springy({
 				graph: graph
 			});
 		});
-		jQuery("#index").removeClass("uk-active");
-		jQuery("#springy").addClass("uk-active");
-		jQuery("#jstest").removeClass("uk-active");
-		jQuery("#help").removeClass("uk-active");
+		navmenu("#springy");
 
 	h1= title
 	p This is copy of springy json. Data is made by JSON.

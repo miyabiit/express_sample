@@ -20,14 +20,12 @@ block content
 			['Barbara', 'Timothy', {color: '#6A4A3C'}]
 		);
 		
-		jQuery(function(){
-			var springy = jQuery('#springydemo').springy({
+		$(function(){
+			var springy = $('#springydemo').springy({
 				graph: graph
 			});
 		});
-		jQuery("#index").removeClass("uk-active");
-		jQuery("#springy").addClass("uk-active");
-		jQuery("#help").removeClass("uk-active");
+		navmenu("#springy");
 
 	h1= title
 	p This is copy of springy simple demo. But two conections are there.

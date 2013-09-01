@@ -2,10 +2,7 @@ extends layout
 
 block content
 	script.
-		jQuery("#index").addClass("uk-active");
-		jQuery("#springy").removeClass("uk-active");
-		jQuery("#jstest").removeClass("uk-active");
-		jQuery("#help").removeClass("uk-active");
+		navmenu("#index");
 		
 	h1= title
 	p Welcome to #{title}

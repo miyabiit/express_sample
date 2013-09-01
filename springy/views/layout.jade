@@ -1,4 +1,4 @@
-doctype 5
+!!! 5
 html
 	head
 		title= title
@@ -7,6 +7,25 @@ html
 		link(rel="stylesheet", href="/stylesheets/font-awesome.css")
 		script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js")
 		script(src="/javascripts/uikit.min.js")
+		script.
+			var navmenu = function(item) {
+				var menu = ["#index", '#springy', '#jstest', '#help'];
+				$.each(menu, function(index,value){
+					if(item == value){
+						$(value).addClass("uk-active");
+					}else{
+						$(value).removeClass("uk-active");
+					}
+				});
+			};
+
+			// for JavaScript Ninja assert test.
+			function assert(value, desc){
+				var li = document.createElement("li");
+				li.className = value ? "pass" : "fail uk-icon-warning-sign";
+				li.appendChild(document.createTextNode(desc));
+				document.getElementById("results").appendChild(li);
+			}
 	body
 		div.uk-container
 			div.uk-navbar

@@ -2,10 +2,7 @@ extends layout
 block content
 	h1 日本語の文書をテストしてみる
 	script.
-		jQuery("#index").removeClass("uk-active");
-		jQuery("#springy").removeClass("uk-active");
-		jQuery("#jstest").removeClass("uk-active");
-		jQuery("#help").addClass("uk-active");
+		navmenu("#help");
 
 	p テスト文書
 	h2= subtitle
