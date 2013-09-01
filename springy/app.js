@@ -38,6 +38,9 @@ app.get('/springy', routes.springy);
 app.get('/springy2', routes.springy2);
 app.get('/test', routes.test);
 app.get('/jstest',routes.jstest);
+app.get('/jstest/:id', function(req,res) {
+	res.render('jstest/' + req.params.id + '.jade', { title : 'Javascript Ninja' });
+});
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

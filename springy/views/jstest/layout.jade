@@ -18,7 +18,23 @@ html
 					}
 				});
 			};
-			
+			var setJsTestMenu = function(item) {
+				var menu = ['#jstest0', '#jstest1'];
+				$.each(menu, function(index,value) {
+					if(value == item){
+						$(value).addClass("uk-active");
+					}else{
+						$(value).removeClass("uk-active");
+					}
+				});
+			};
+			// for JavaScript Ninja assert test.
+			function assert(value, desc){
+				var li = document.createElement("li");
+				li.className = value ? "pass" : "fail uk-icon-warning-sign";
+				li.appendChild(document.createTextNode(desc));
+				document.getElementById("results").appendChild(li);
+			}
 	body
 		div.uk-container
 			div.uk-navbar
@@ -40,4 +56,13 @@ html
 					ul.uk-navbar-nav
 						li#help
 							a(href="/test") HELP
-			block content
+			h1 Javascript Ninja Test Suite and Lessons
+			div.uk-grid
+				div.uk-width-2-10
+					ul#jstestmenu(class="uk-nav uk-nav-side")
+						li.uk-active#jstest0
+							a(href="/jstest/0") TEST0
+						li#jstest1
+							a(href="/jstest/1") TEST1
+				div.uk-width-8-10
+					block content

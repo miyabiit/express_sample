@@ -20,5 +20,5 @@ exports.springy2 = function (req, res){
 };
 
 exports.jstest = function (req, res) {
-	res.render('js_test0.jade', { title: 'Javascript Ninja Test code sample'});
+	res.render('jstest/0.jade', { title: 'Javascript Ninja Test code sample'});
 };
