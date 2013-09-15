@@ -1,0 +1,12 @@
+extends layout
+block content
+	script(src="/javascripts/lifegame.js")
+	script.
+		navmenu("#lifegame");
+
+	h1= title
+
+	canvas#world
+
+	script.
+		lifegame();

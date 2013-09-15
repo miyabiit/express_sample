@@ -22,3 +22,7 @@ exports.springy2 = function (req, res){
 exports.jstest = function (req, res) {
 	res.render('jstest/0.jade', { title: 'Javascript Ninja Test code sample'});
 };
+
+exports.lifegame = function (req, res){
+	res.render('lifegame.jade', { title: 'LIFEGAME'});
+};
