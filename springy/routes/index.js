@@ -26,3 +26,7 @@ exports.jstest = function (req, res) {
 exports.lifegame = function (req, res){
 	res.render('lifegame.jade', { title: 'LIFEGAME'});
 };
+
+exports.processing = function (req, res) {
+	res.render('processing.jade', { title: 'PROCESSING SAMPLE' });
+};

@@ -42,6 +42,10 @@ app.get('/jstest/:id', function(req,res) {
 	res.render('jstest/' + req.params.id + '.jade', { title : 'Javascript Ninja' });
 });
 app.get('/lifegame',routes.lifegame);
+app.get('/processing',routes.processing);
+app.get('/processing/:id', function(req,res) {
+	res.render('processing/index.jade', { title : 'PROCESSING SAMPLE', pde_file : req.params.id });
+});
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

@@ -9,7 +9,7 @@ html
 		script(src="/javascripts/uikit.min.js")
 		script.
 			var navmenu = function(item) {
-				var menu = ["#index", '#springy', '#jstest', '#lifegame', '#help'];
+				var menu = ["#index", '#springy', '#jstest', '#lifegame', '#processing', '#help'];
 				$.each(menu, function(index,value){
 					if(item == value){
 						$(value).addClass("uk-active");
@@ -38,6 +38,8 @@ html
 						a.uk-navbar-nav(href="/jstest") JS Ninja
 					li#lifegame
 						a.uk-navbar-nav(href="/lifegame") LIFE GAME
+					li#processing
+						a.uk-navbar-nav(href="/processing") PROCESSING
 				nav.uk-navbar-flip
 					ul.uk-navbar-nav
 						li#help

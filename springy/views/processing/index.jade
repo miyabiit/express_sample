@@ -1,0 +1,28 @@
+extends ../layout
+block content
+	script.
+		navmenu("#processing");
+	p Welcome to #{title}
+		div.uk-button-group
+			button(class="uk-button uk-button-primary" type="submit") Simulation
+			div(data-uk-dropdown class)
+				a(class="uk-button uk-button-primary" href="#")
+					i.uk-icon-caret-down
+				div(class="uk-dropdown uk-dropdown-small" style)
+					ul(class="uk-nav uk-nav-dropdown")
+						li
+							a(href="/processing/130903a") BOIDS
+						li
+							a(href="/processing/130914a") BOIDS nulnul.net
+						li.uk-nav-divider
+						li
+							a(href="processing/") NO ITEM 
+	script(src="/javascripts/processing.js")
+	canvas(id="#{pde_file}" data-processing-sources="/processings/sketch_#{pde_file}.pde" width="640" height="360")
+	h3 sketch_#{pde_file} 
+	p#description
+	p#sources Source code: 
+		a(href="/processings/sketch_#{pde_file}.pde") sketch_#{pde_file}
+	p Built with 
+		a(href="http://processing.org" title="Processing") Processing and 
+		a(href="http://processingjs.org" title="Processing.js") Processing.js
