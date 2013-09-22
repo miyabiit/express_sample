@@ -9,7 +9,7 @@ html
 		script(src="/javascripts/uikit.min.js")
 		script.
 			var navmenu = function(item) {
-				var menu = ["#index", '#springy', '#jstest', '#lifegame', '#processing', '#help'];
+				var menu = ["#index", '#springy', '#jstest', '#lifegame', '#processing', '#chartjs', '#help'];
 				$.each(menu, function(index,value){
 					if(item == value){
 						$(value).addClass("uk-active");
@@ -22,7 +22,7 @@ html
 	body
 		div.uk-container
 			div.uk-navbar
-				a.uk-navbar-brand(href="http://getspringy.com") UIKIT & SPRINGY.JS
+				a.uk-navbar-brand(href="/") UIKIT & JS show
 				ul.uk-navbar-nav
 					li#index.uk-active
 						a(href="/") UI sample
@@ -40,6 +40,8 @@ html
 						a.uk-navbar-nav(href="/lifegame") LIFE GAME
 					li#processing
 						a.uk-navbar-nav(href="/processing") PROCESSING
+					li#chartjs
+						a.uk-navbar-nav(href="/chartjs.html") CHART.JS
 				nav.uk-navbar-flip
 					ul.uk-navbar-nav
 						li#help
