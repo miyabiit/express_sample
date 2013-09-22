@@ -1,0 +1,165 @@
+extends layout
+block content
+	script(src="/javascripts/Chart.js")
+	script.
+		navmenu("#chartjs");
+	div(style="height:10px")
+	div.uk-panel-box
+		h4.uk-comment-title Chart.js sample
+		このサンプルはchart.jsをコピーしたものです。レイアウトは、UIkit framewarkを使ってみました。
+	div(style="height:10px")
+	ul.uk-tab(data-uk-tab="{connect:'#chart'}")
+		li.uk-active
+			a 棒グラフ(BAR)
+		li
+			a ドーナツ(DAUGHNUT)
+		li
+			a 折れ線(LINE)
+		li
+			a レーダ(RADER)
+		li
+			a 円グラフ(PIE)
+		li
+			a POLARAREA
+		
+	ul#chart(class="uk-switcher uk-margin")
+		li
+			canvas#bar(height="350" width="600")
+			script.
+				var barChartData = {
+					labels : ["January","February","March","April","May","June","July"],
+					datasets : [
+						{
+							fillColor : "rgba(220,220,220,0.5)",
+							strokeColor : "rgba(220,220,220,1)",
+							data : [65,59,90,81,56,55,40]
+						},
+						{
+							fillColor : "rgba(151,187,205,0.5)",
+							strokeColor : "rgba(151,187,205,1)",
+							data : [28,48,40,19,96,27,100]
+						}
+					]
+				}
+				var myLine = new Chart(document.getElementById("bar").getContext("2d")).Bar(barChartData);
+		li
+			canvas#daughnut(height="350" width="350")
+			script.
+				var doughnutData = [
+					{
+						value: 30,
+						color:"#F7464A"
+					},
+					{
+						value : 50,
+						color : "#46BFBD"
+					},
+					{
+						value : 100,
+						color : "#FDB45C"
+					},
+					{
+						value : 40,
+						color : "#949FB1"
+					},
+					{
+						value : 120,
+						color : "#4D5360"
+					}
+				];
+				var myDoughnut = new Chart(document.getElementById("daughnut").getContext("2d")).Doughnut(doughnutData);
+		li
+			canvas#line(height="350" width="600")
+			script.
+				var lineChartData = {
+					labels : ["January","February","March","April","May","June","July"],
+					datasets : [
+						{
+							fillColor : "rgba(220,220,220,0.5)",
+							strokeColor : "rgba(220,220,220,1)",
+							pointColor : "rgba(220,220,220,1)",
+							pointStrokeColor : "#fff",
+							data : [65,59,90,81,56,55,40]
+						},
+						{
+							fillColor : "rgba(151,187,205,0.5)",
+							strokeColor : "rgba(151,187,205,1)",
+							pointColor : "rgba(151,187,205,1)",
+							pointStrokeColor : "#fff",
+							data : [28,48,40,19,96,27,100]
+						}
+					]
+				}
+				var myLine = new Chart(document.getElementById("line").getContext("2d")).Line(lineChartData);
+		li
+			canvas#rader(height="350" width="350")
+			script.
+				var radarChartData = {
+					labels : ["Eating","Drinking","Sleeping","Designing","Coding","Partying","Running"],
+					datasets : [
+						{
+							fillColor : "rgba(220,220,220,0.5)",
+							strokeColor : "rgba(220,220,220,1)",
+							pointColor : "rgba(220,220,220,1)",
+							pointStrokeColor : "#fff",
+							data : [65,59,90,81,56,55,40]
+						},
+						{
+							fillColor : "rgba(151,187,205,0.5)",
+							strokeColor : "rgba(151,187,205,1)",
+							pointColor : "rgba(151,187,205,1)",
+							pointStrokeColor : "#fff",
+							data : [28,48,40,19,96,27,100]
+						}
+					]
+				}
+				var myRadar = new Chart(document.getElementById("rader").getContext("2d")).Radar(radarChartData,{scaleShowLabels : false, pointLabelFontSize : 10});
+		li
+			canvas#pie(height="350" width="350")
+			script.
+				var pieData = [
+						{
+							value: 30,
+							color:"#F38630"
+						},
+						{
+							value : 50,
+							color : "#E0E4CC"
+						},
+						{
+							value : 100,
+							color : "#69D2E7"
+						}
+					
+					];
+				var myPie = new Chart(document.getElementById("pie").getContext("2d")).Pie(pieData);
+		li
+			canvas#polar(height="400" width="400")
+			script.
+				var chartData = [
+					{
+						value : Math.random(),
+						color: "#D97041"
+					},
+					{
+						value : Math.random(),
+						color: "#C7604C"
+					},
+					{
+						value : Math.random(),
+						color: "#21323D"
+					},
+					{
+						value : Math.random(),
+						color: "#9D9B7F"
+					},
+					{
+						value : Math.random(),
+						color: "#7D4F6D"
+					},
+					{
+						value : Math.random(),
+						color: "#584A5E"
+					}
+				];
+				var myPolarArea = new Chart(document.getElementById("polar").getContext("2d")).PolarArea(chartData);
