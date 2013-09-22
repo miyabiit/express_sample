@@ -19,7 +19,7 @@ html
 				});
 			};
 			var setJsTestMenu = function(item) {
-				var menu = ['#jstest0', '#jstest1'];
+				var menu = ['#jstest0', '#jstest1', '#jstest2', '#jstest3'];
 				$.each(menu, function(index,value) {
 					if(value == item){
 						$(value).addClass("uk-active");
@@ -43,8 +43,12 @@ html
 				div.uk-width-2-10
 					ul#jstestmenu(class="uk-nav uk-nav-side")
 						li.uk-active#jstest0
-							a(href="/jstest/0") TEST0
+							a(href="/jstest/0") シンプルなテスト
 						li#jstest1
-							a(href="/jstest/1") TEST1
+							a(href="/jstest/1") テストグループ
+						li#jstest2
+							a(href="/jstest/2") 非同期テスト
+						li#jstest3
+							a(href="/jstest/3") callback呼び出し
 				div.uk-width-8-10
 					block content

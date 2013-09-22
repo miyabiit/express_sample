@@ -1,0 +1,21 @@
+extends layout
+block content
+	ul#results(class="uk-list uk-list-striped")
+	script.
+		navmenu('#jstest');
+		setJsTestMenu("#jstest3");
+
+		function forEach(list, callback) {
+			for (var n = 0; n < list.length; n++) {
+				callback.call(list[n], n);
+			}
+		}
+
+		var weapons = ['shuriken', 'katana', 'nunchuncks'];
+
+		forEach(
+			weapons,
+			function(index) {
+				assert(this == weapons [index], weapons [index] + "は期待した値を得た");
+			}
+		);
