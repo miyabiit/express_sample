@@ -47,7 +47,7 @@ app.get('/processing/:id', function(req,res) {
 	res.render('processing/index.jade', { title : 'PROCESSING SAMPLE', pde_file : req.params.id });
 });
 app.get('/chartjs', function (req, res) {
-	res.render('/chartjs.html');
+	res.render('chartjs.jade');
 });
 
 http.createServer(app).listen(app.get('port'), function(){
