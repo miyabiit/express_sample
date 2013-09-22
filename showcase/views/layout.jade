@@ -21,29 +21,5 @@ html
 			
 	body
 		div.uk-container
-			div.uk-navbar
-				a.uk-navbar-brand(href="/") UIKIT & JS show
-				ul.uk-navbar-nav
-					li#index.uk-active
-						a(href="/") UI sample
-					li#springy(class="uk-parent", data-uk-dropdown)
-						a Springy
-						div(class="uk-dropdown uk-dropdown-navbar")
-							ul(class="uk-nav uk-nav-navbar")
-								li#demo-springy
-									a(href="/springy") Demo data json
-								li#demo-springy2
-									a(href="/springy2") Demo simple
-					li#jstest
-						a.uk-navbar-nav(href="/jstest") JS Ninja
-					li#lifegame
-						a.uk-navbar-nav(href="/lifegame") LIFE GAME
-					li#processing
-						a.uk-navbar-nav(href="/processing") PROCESSING
-					li#chartjs
-						a.uk-navbar-nav(href="/chartjs.html") CHART.JS
-				nav.uk-navbar-flip
-					ul.uk-navbar-nav
-						li#help
-							a(href="/test") HELP
+			include menu
 			block content
