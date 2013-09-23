@@ -19,7 +19,7 @@ html
 				});
 			};
 			var setJsTestMenu = function(item) {
-				var menu = ['#jstest0', '#jstest1', '#jstest2', '#jstest3'];
+				var menu = ['#jstest0', '#jstest1', '#jstest2', '#jstest3', '#jstest4'];
 				$.each(menu, function(index,value) {
 					if(value == item){
 						$(value).addClass("uk-active");
@@ -50,5 +50,7 @@ html
 							a(href="/jstest/2") 非同期テスト
 						li#jstest3
 							a(href="/jstest/3") callback呼び出し
+						li#jstest4
+							a(href="/jstest/4") apply()とcall() p64
 				div.uk-width-8-10
 					block content
