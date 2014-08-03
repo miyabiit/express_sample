@@ -1,0 +1,17 @@
+extends layout
+block content
+	script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js")
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js")
+	script(src="/javascripts/sequence-diagram-min.js")
+	script.
+		navmenu("#seqdiag");
+	h2 シーケンス図作成
+	a(href="http://bramp.github.io/js-sequence-diagrams/" target="_blank") js-sequence-diagrams
+	div.diagram.
+		A->B: 日本語のメッセージ
+		B-->A: 返事
+
+	script.
+		$(".diagram").sequenceDiagram({theme: 'simple'});
+
