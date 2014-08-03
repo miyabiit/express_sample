@@ -30,3 +30,7 @@ exports.lifegame = function (req, res){
 exports.processing = function (req, res) {
 	res.render('processing.jade', { title: 'PROCESSING SAMPLE' });
 };
+
+exports.seqdiag = function (req, res) {
+	res.render('seqdiag.jade', { title: 'DIAGRAM MAKER' });
+};

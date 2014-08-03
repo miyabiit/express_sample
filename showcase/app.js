@@ -12,7 +12,7 @@ var path = require('path');
 var app = express();
 
 // all environments
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 4003);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 app.use(express.favicon());
@@ -48,6 +48,9 @@ app.get('/processing/:id', function(req,res) {
 });
 app.get('/chartjs', function (req, res) {
 	res.render('chartjs.jade');
+});
+app.get('/seqdiag', function (req, res) {
+	res.render('seqdiag.jade');
 });
 
 //http.createServer(app).listen(app.get('port'), function(){
